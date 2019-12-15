@@ -73,6 +73,10 @@ private:
 
 // additional variables as Snopt76 base class doesn't have them, not really
 // necessary but to keep the same structure of the original SnoptAdapter
+#ifndef SNOPT76
+#define SNOPT76 true
+#endif
+
 #ifdef SNOPT76
 
 public:

@@ -38,6 +38,7 @@ SnoptAdapter::SnoptAdapter (Problem& ref)
 void
 SnoptAdapter::Init ()
 {
+  initialize ("", 1);
   int obj_count = nlp_->HasCostTerms()? 1 : 0;
   n     = nlp_->GetNumberOfOptimizationVariables();
   neF   = nlp_->GetNumberOfConstraints() + obj_count;
@@ -118,7 +119,7 @@ SnoptAdapter::Init ()
     }
   }
 
-  setUserFun(&SnoptAdapter::ObjectiveAndConstraintFct);
+  //setUserFun(&SnoptAdapter::ObjectiveAndConstraintFct);
 }
 
 void
